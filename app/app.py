@@ -1,5 +1,5 @@
 from flask import Flask,request
-
+SECRET_KEY = "password123456"
 app = Flask(__name__)
 
 @app.route("/")
