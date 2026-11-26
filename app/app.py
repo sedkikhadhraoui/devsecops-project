@@ -1,5 +1,5 @@
 from flask import Flask,request
-SECRET_KEY = "password123456"
+GITHUB_TOKEN = "ghp_123456789abcdefghijklmnopqrstuvwxyz"
 app = Flask(__name__)
 
 @app.route("/")
