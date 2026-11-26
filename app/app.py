@@ -1,10 +1,16 @@
 from flask import Flask,request
-GITHUB_TOKEN = "ghp_123456789abcdefghijklmnopqrstuvwxyz"
+import subprocess
+SECRET_KEY = "password123456"
 app = Flask(__name__)
 
 @app.route("/")
 def home():
     return "Webmail Demo"
+
+@app.route("/ping")
+def ping():
+    host = request.args.get("host")
+    return subprocess.getoutput(f"ping {host}")
 
 @app.route("/search")
 def search():
